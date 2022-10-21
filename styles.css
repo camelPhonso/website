@@ -1,0 +1,98 @@
+html{
+    font-family:sans-serif;
+    font-size:large;
+    letter-spacing:0.5;
+}
+
+:root{
+    --base:#93a8ac;
+    --highlights:#d7ceb2;
+    --darks:#4c5760;
+}
+
+body{
+
+    background-color:var(--base);
+}
+
+h4{
+    margin-left:1rem;
+}
+
+p{
+    margin:1rem 1.5rem;
+}
+
+/*styling the navigation bar on top*/
+#navbar{
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap:1rem;
+}
+
+.navlink{
+    list-style-type: none;
+    text-decoration:none;
+}
+
+/*styling the about_me section*/
+
+/*styling the learning_curve section*/
+#learning_curve{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    position:relative;
+}
+
+#learning_curve p{
+    width:80%;
+    text-align:justify;
+}
+
+.learning{
+    grid-column: 1;
+}
+
+#code_example{
+    grid-column:2;
+    background-color:var(--darks);
+    color:var(--highlights);
+    display:block;
+    padding:1rem;
+    width:92%;
+    position: absolute;
+    top:0;
+    right:10%;
+    border-radius:20px;
+    overflow:auto;
+    font-size:0.8rem;
+}
+
+#code_example:hover{
+    opacity:20%;
+}
+
+#example_caption{
+    grid-column:2;
+}
+
+#sign{
+    font-size:2rem;
+    text-decoration:none;
+    color:var(--darks);
+    text-align:center;
+    width:90%;
+    margin-top:-4em;
+}
+
+.indent{
+    padding-left:2em;
+}
+
+.indent-more{
+    padding-left:4em;
+}
+
+/*styling the fun section*/

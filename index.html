@@ -1,0 +1,76 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+    <header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>'About me' website</title>
+    </header>
+    <body>
+        <head>
+            <ul id="navbar">
+                <li class="navlink">
+                    <a>Interests</a>
+                </li>
+                <li class="navlink">
+                    <a>Work history</a>
+                </li>
+                <li class="navlink">
+                    <a>Learning</a>
+                </li>
+            </ul>
+        </head>
+        <section id="about_me">
+            <h4>Personal Intro</h4>
+            <p>
+                Hi! I'm Alphonso, a poet, short-story writer, musician, and now, starting as a coder.
+            </p>
+            <h4>My career so far</h4>
+            <p>
+                When I arrived in London, 7 years ago, I had little experience but found opportunities in the capital and got started in a carrer managing different service industry businesses. Around 2019, I made the move into HR (only, we call it 'People' nowadays). The learning experience was great, but I'm ready for a different kind of challenge.
+            </p>
+            <h4>Why I'm applying to Founders and Coders</h4>
+            <p>
+                I recognised in my habitual ways of working an iterative approach to problem solving and a taste for the kind of task others often find tedious (like handling data, or setting up new company-wide systems) and I wondered what different career path might be out there that I would enjoy. Luckily, I was exposed to the work of the Web Developers at my last job, and a spark came to life.
+            </p>
+        </section>
+        <section id="learning_curve">
+            <p class="learning">
+                I started studying on my own by mid September 2022 and quickly got hooked. This is the kind of stimulating challenge I enjoy meeting with and it was easy for me to understand that web development was the next step in my career.
+            </p>
+            <p class="learning">
+                I started looking at Bootcamps that might help me make the leap and came across Founders and Coders. It seemed perfect for me and, because there is no time like now, I got started on the application challenges. They definitely pushed my learning to a new level.
+            </p>
+            <p class="learning">
+                Here on the right is a piece of code I particularly enjoyed developing during my application.
+            </p>
+            <a id="to_gallery" href="https://github.com/camelPhonso/website.git">
+                <code id="code_example">
+                    function render(obj){<br>
+                        document.getElementById('movie_list').innerHTML = ''; //clear last<br>
+                        document.getElementById('selector').innerHTML = '';<br>
+                        <p class="indent">
+                            for (let i of Object.keys(obj)){ //iterate through Object<br>
+                                <p class="indent-more">
+                                let par = document.createElement('p'); <br> 
+                                par.classList.add('film_display');<br>
+                                par.classList.add('hidden');<br>
+                                par.setAttribute('onmouseover', 'details(this.textContent)', 'hide()');<br>
+                                let cont = document.createTextNode(i);<br>
+                                display.appendChild(par);<br>
+                                par.appendChild(cont);<br>
+                                </p>
+                            };<br>
+                        </p>
+                      };
+                    </code>
+                    <h3 id="sign">Click through to see the full code</h3>
+                </a>
+            <p id="example_caption">
+                I knew I'd need to complete the actions in this function several times when interacting with the "movie data" challenge, so I wanted to design it in a way that would allow me to simply call the function at any point. This challenged me to take a more functional approach to this object-based challenge. I also learned a whole lot about DOM that I hadn't even breached before. I actually ended up going back to the "comment box" challenge and changing the code there to use my new learnings.<br>
+                <br>Try 
+            </p>
+        </section>
+        <section id="fun"></section>
+    </body>
+</html>
