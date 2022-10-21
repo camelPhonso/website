@@ -28,16 +28,41 @@ p{
     text-align:justify;
 }
 
-/*styling the virtual frame*/
+/*styling the display section*/
+#display{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:left;
+}
+
 #frame{
-    height:90%;
-    width:40%;
+    height:75vh;
+    width:30vw;
     border:20px solid;
     border-left-color:#704214;
     border-right-color:#704214;
     border-top-color:#654321;
     border-bottom-color:#654321;
     margin:auto;
+}
+
+#waves{
+    height:100%;
+    width:100%;
+    object-fit: fill;
+}
+
+#museum-label{
+    background-color:whitesmoke;
+    width:30vw;
+    padding:0.5em;
+    border-radius:10px;
+    font-size: 14;
+}
+
+.bold{
+    font-weight:bold;
 }
 
 /*styling the navigation bar on top*/
