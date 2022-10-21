@@ -28,6 +28,18 @@ p{
     text-align:justify;
 }
 
+/*styling the virtual frame*/
+#frame{
+    height:90%;
+    width:40%;
+    border:20px solid;
+    border-left-color:#704214;
+    border-right-color:#704214;
+    border-top-color:#654321;
+    border-bottom-color:#654321;
+    margin:auto;
+}
+
 /*styling the navigation bar on top*/
 nav{
    background-color:var(--highlights);
