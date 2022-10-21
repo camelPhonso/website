@@ -4,6 +4,10 @@ html{
     letter-spacing:0.5;
 }
 
+*{
+    box-sizing:border-box;
+}
+
 :root{
     --base:#93a8ac;
     --highlights:#d7ceb2;
@@ -11,8 +15,8 @@ html{
 }
 
 body{
-
     background-color:var(--base);
+    margin-top:5%;
 }
 
 h4{
@@ -21,20 +25,38 @@ h4{
 
 p{
     margin:1rem 1.5rem;
+    text-align:justify;
 }
 
 /*styling the navigation bar on top*/
-#navbar{
-    display:flex;
-    flex-flow:row nowrap;
-    align-items: center;
-    justify-content: flex-end;
-    gap:1rem;
+nav{
+   background-color:var(--highlights);
+   display:flex;
+   flex-flow:row nowrap;
+   align-items: center;
+   justify-content: space-between;
+   height:5%;
+   width:100%;
+   position:fixed;
+   top:0;
+   left:0;
+   z-index:3;
+}
+
+#nav-list{
+
 }
 
 .navlink{
     list-style-type: none;
     text-decoration:none;
+    display:inline-block;
+    padding:0 1em;
+    color:var(--darks);
+}
+
+.navlink:hover{
+    font-weight:bold;
 }
 
 /*styling the about_me section*/
@@ -46,13 +68,9 @@ p{
     position:relative;
 }
 
-#learning_curve p{
-    width:80%;
-    text-align:justify;
-}
-
 .learning{
     grid-column: 1;
+    width:80%;
 }
 
 #code_example{
@@ -71,7 +89,7 @@ p{
 }
 
 #code_example:hover{
-    opacity:20%;
+    opacity:10%;
 }
 
 #example_caption{
@@ -80,7 +98,7 @@ p{
 
 #sign{
     font-size:2rem;
-    color:var(--darks);
+    color:var(--highlights);
     text-align:center;
     position:absolute;
     top:30%;
