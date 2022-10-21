@@ -63,7 +63,7 @@ p{
     padding:1rem;
     width:92%;
     position: absolute;
-    top:0;
+    top:10em;
     right:10%;
     border-radius:20px;
     overflow:auto;
@@ -80,11 +80,12 @@ p{
 
 #sign{
     font-size:2rem;
-    text-decoration:none;
     color:var(--darks);
     text-align:center;
-    width:90%;
-    margin-top:-4em;
+    position:absolute;
+    top:30%;
+    right:12%;
+    z-index:-2;
 }
 
 .indent{
@@ -94,5 +95,17 @@ p{
 .indent-more{
     padding-left:4em;
 }
+
+.direct-link{
+    text-decoration:none;
+    color:black;
+}
+
+.direct-link:hover{
+    color:var(--highlights);
+}
+
+/*.timed will be activated through DOM with setTime() so links are highlighted after a set amount of time of the user viewing the page*/ 
+.timed{}
 
 /*styling the fun section*/
