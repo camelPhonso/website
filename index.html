@@ -7,19 +7,19 @@
         <title>'About me' website</title>
     </header>
     <body>
-           <nav>
+        <nav>
             <ul id="nav-list">
                 <li class="navlink">
-                    <a>Personal intro</a>
+                    <a href="#about_me">Personal intro</a>
                 </li>
                 <li class="navlink">
-                    <a>Work history</a>
+                    <a href="#work_history">Work history</a>
                 </li>
                 <li class="navlink">
-                    <a>Learning curve</a>
+                    <a href="#learning_curve">Learning curve</a>
                 </li>
             </ul>
-           </nav>
+        </nav>
         <section id="display">
         <div id="frame">
             <img id="waves" alt="acrilic painting displayed in virtual frame" src="https://github.com/camelPhonso/website/blob/main/images/IMG_1274.JPG?raw=true">
@@ -31,7 +31,7 @@
         </p>
         </section>
         <section id="about_me">
-            <h4>Personal Intro</h4>
+            <h4>Personal Intro</h4></a>
             <p>
                 Hi! I'm Alphonso and this is an early stage in my journey to become a web developer. I'll share a little more below, but first it might be fun to talk about my other interests.
             </p>
@@ -39,8 +39,10 @@
                 I discovered a creative streak in my teenage years that has remained a very meaningful part of life for me all the way into my 30s (just realised while writting this - time goes by...). I like focusing on creative projects, alone or with friends, and this lead to taking part in a few bands, self-publishing some short stories and poetry chap-books, a handful of acylics paintings and even a screenplay (still in the works with friends). Creating something is the best form of therapy for me and everytime I venture into a new project or a different medium I only feel more passionate about it. All of my art helps me explore a variety of philosophical ideologies, theological questions and personal life lessons. I'm vegan, straight edge and gender nonconforming, and all of this features greatly in my creations.
             </p>
             <p>
-                Apart from any creative pursuits, I like to focus on quality time with friends, my dog and my partner.
+                Apart from any creative pursuits, I like to focus on quality time with my partner, my dog and my friends.
             </p>
+        </section>
+        <section id="work_history">
             <h4>My career so far</h4>
             <p>
                 When I arrived in London, 7 years ago, I had little experience but found the city filled with opportunity and was able to start a management career across different businesses. I worked in various locatons for two of the major cinema chains and a well-known coffee company, but realised it was time to find something I could relate with a little more. 
@@ -69,38 +71,35 @@
             <p class="learning">
                 Here on the right is a piece of code I particularly enjoyed developing during my application.
             </p>
-            <div id="example" class="timed">
+            
+            <p class="learning">
+                 Of course, all the learning so far lead to this very page. You can peek behind the fourth wall right <a class="direct-link timed" href="https://github.com/camelPhonso/website.git">here!</a>
+            </p>
+        </section>
             <a id="to_gallery" href="https://camelphonso.github.io/projects_gallery/">
                 <code id="code_example">
                     function render(obj){<br>
-                        document.getElementById('movie_list').innerHTML = ''; //clear last<br>
-                        document.getElementById('selector').innerHTML = '';<br>
-                        <p class="indent">
-                            for (let i of Object.keys(obj)){ //iterate through Object<br>
-                                <p class="indent-more">
-                                let par = document.createElement('p'); <br> 
-                                par.classList.add('film_display');<br>
-                                par.classList.add('hidden');<br>
-                                par.setAttribute('onmouseover', 'details(this.textContent)', 'hide()');<br>
-                                let cont = document.createTextNode(i);<br>
-                                display.appendChild(par);<br>
-                                par.appendChild(cont);<br>
-                                </p>
-                            };<br>
-                        </p>
-                      };
-                    </code>
-                    <h3 id="sign">Click through to see more</h3>
-                </a>
-            </div>
-            <p class="learning">
-                Of course, all the learning so far lead to this very page. You can peek behind the fourth wall right <a class="direct-link timed" href="https://github.com/camelPhonso/website.git">here!</a>
-            </p>
+                    document.getElementById('movie_list').innerHTML = ''; //clear last<br>
+                    document.getElementById('selector').innerHTML = '';<br>
+                    <p class="indent">
+                        for (let i of Object.keys(obj)){ //iterate through Object<br>
+                            <p class="indent-more">
+                            let par = document.createElement('p'); <br> 
+                            par.classList.add('film_display');<br>
+                            par.classList.add('hidden');<br>
+                            par.setAttribute('onmouseover', 'details(this.textContent)', 'hide()');<br>
+                            let cont = document.createTextNode(i);<br>
+                            display.appendChild(par);<br>
+                            par.appendChild(cont);<br>
+                            </p>
+                        };<br>
+                    </p>
+                  };
+                </code>
+            </a>
             <p id="example_caption">
-                I knew I'd need to complete the actions in this function several times when interacting with the "movie data" challenge, so I wanted to design it in a way that would allow me to simply call the function at any point. This challenged me to take a more functional approach to this object-based challenge. I also learned a whole lot about DOM that I hadn't even breached before. I actually ended up going back to the "comment box" challenge and changing the code there to use my new learnings.<br>
-                <br>Try opening the example to see more of my learning journey so far.
+                I knew I'd need to complete the actions in this function several times when interacting with the "movie data" challenge, so I wanted to design it in a way that would allow me to simply call the function at any point. This challenged me to take a more functional approach to this object-based challenge. I also learned a whole lot about DOM that I hadn't even breached before. I actually ended up going back to the "comment box" challenge and changing the code there to use my new learnings.
             </p>
-        </section>
         <section id="fun"></section>
     </body>
 </html>

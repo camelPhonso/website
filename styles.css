@@ -24,7 +24,7 @@ h4{
 }
 
 p{
-    margin:1rem 1.5rem;
+    padding:1rem 1.5rem;
     text-align:justify;
 }
 
@@ -34,11 +34,15 @@ p{
     flex-flow:column nowrap;
     align-items:center;
     justify-content:left;
+    float:right;
+    width:50%;
 }
 
 #frame{
     height:75vh;
+    max-height:600px;
     width:30vw;
+    min-width:200px;
     border:20px solid;
     border-left-color:#704214;
     border-right-color:#704214;
@@ -80,16 +84,15 @@ nav{
    z-index:3;
 }
 
-#nav-list{
-
-}
-
 .navlink{
     list-style-type: none;
-    text-decoration:none;
     display:inline-block;
     padding:0 1em;
-    color:var(--darks);
+}
+
+#nav-list a{
+    text-decoration: none;
+    color: var(--darks);
 }
 
 .navlink:hover{
@@ -100,47 +103,24 @@ nav{
 
 /*styling the learning_curve section*/
 #learning_curve{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    position:relative;
-}
-
-.learning{
-    grid-column: 1;
-    width:80%;
+   float:left;
+   width:50%;
 }
 
 #code_example{
-    grid-column:2;
     background-color:var(--darks);
     color:var(--highlights);
     display:block;
     padding:1rem;
-    width:92%;
-    position: absolute;
-    top:10em;
-    right:10%;
+    width:50%;
     border-radius:20px;
     overflow:auto;
     font-size:0.8rem;
 }
 
-#code_example:hover{
-    opacity:10%;
-}
-
 #example_caption{
-    grid-column:2;
-}
-
-#sign{
-    font-size:2rem;
-    color:var(--highlights);
-    text-align:center;
-    position:absolute;
-    top:30%;
-    right:12%;
-    z-index:-2;
+    width:50%;
+    float:right;
 }
 
 .indent{
@@ -159,8 +139,5 @@ nav{
 .direct-link:hover{
     color:var(--highlights);
 }
-
-/*.timed will be activated through DOM with setTime() so links are highlighted after a set amount of time of the user viewing the page*/ 
-.timed{}
 
 /*styling the fun section*/
