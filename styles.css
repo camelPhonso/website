@@ -24,25 +24,16 @@ h4{
 }
 
 p{
-    padding:1rem 1.5rem;
+    padding:0.5rem 1.5rem;
     text-align:justify;
 }
 
-/*styling the display section*/
-#display{
-    display:flex;
-    flex-flow:column nowrap;
-    align-items:center;
-    justify-content:left;
-    float:right;
-    width:50%;
-}
-
+/*styling the #frame and artwork*/
 #frame{
     height:75vh;
     max-height:600px;
-    width:30vw;
-    min-width:200px;
+    width:moinmax(200px, 30vw);
+    min-width:400px;
     border:20px solid;
     border-left-color:#704214;
     border-right-color:#704214;
@@ -59,7 +50,7 @@ p{
 
 #museum-label{
     background-color:whitesmoke;
-    width:30vw;
+    width:minmax(400px, 30vw);
     padding:0.5em;
     border-radius:10px;
     font-size: 14;
@@ -68,59 +59,48 @@ p{
 .bold{
     font-weight:bold;
 }
-
-/*styling the navigation bar on top*/
-nav{
-   background-color:var(--highlights);
-   display:flex;
-   flex-flow:row nowrap;
-   align-items: center;
-   justify-content: space-between;
-   height:5%;
-   width:100%;
-   position:fixed;
-   top:0;
-   left:0;
-   z-index:3;
+/*styling template sections template*/
+section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:flex-start;
+    align-items:center;
+    padding:1rem;
 }
 
-.navlink{
-    list-style-type: none;
-    display:inline-block;
-    padding:0 1em;
+.heading{
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:baseline;
+    background:var(--highlights);
+    width:98vw;
 }
 
-#nav-list a{
-    text-decoration: none;
-    color: var(--darks);
+button{
+    background:transparent;
+    border:none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-size: 1em;
 }
 
-.navlink:hover{
-    font-weight:bold;
+.content{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-items:space-between;
+    align-items:center;
+    margin:1em;
 }
-
-/*styling the about_me section*/
 
 /*styling the learning_curve section*/
-#learning_curve{
-   float:left;
-   width:50%;
-}
-
 #code_example{
     background-color:var(--darks);
     color:var(--highlights);
     display:block;
     padding:1rem;
-    width:50%;
     border-radius:20px;
     overflow:auto;
     font-size:0.8rem;
-}
-
-#example_caption{
-    width:50%;
-    float:right;
+    width: minmax(400px, 500px);
 }
 
 .indent{
@@ -140,4 +120,15 @@ nav{
     color:var(--highlights);
 }
 
-/*styling the fun section*/
+/*styling the effect of .hidden */
+.hidden{
+    height:90px;
+    overflow:hidden;
+}
+
+@media screen and (max-width:900px){
+    .content{
+        flex-flow:column nowrap;
+
+    }
+}

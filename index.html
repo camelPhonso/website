@@ -4,102 +4,119 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src="main.js" defer></script>
         <title>'About me' website</title>
     </header>
-    <body>
-        <nav>
-            <ul id="nav-list">
-                <li class="navlink">
-                    <a href="#about_me">Personal intro</a>
-                </li>
-                <li class="navlink">
-                    <a href="#work_history">Work history</a>
-                </li>
-                <li class="navlink">
-                    <a href="#learning_curve">Learning curve</a>
-                </li>
-            </ul>
-        </nav>
-        <section id="display">
-        <div id="frame">
-            <img id="waves" alt="acrilic painting displayed in virtual frame" src="https://github.com/camelPhonso/website/blob/main/images/IMG_1274.JPG?raw=true">
-        </div>
-        <p id="museum-label">
-            <span class="bold">Alphonso</span> (a. 1312)<br>
-            <span class="bold">The waves could have swallowed the sky whole</span> 2018<br>
-            Acrylic on paper
-        </p>
-        </section>
-        <section id="about_me">
-            <h4>Personal Intro</h4></a>
-            <p>
-                Hi! I'm Alphonso and this is an early stage in my journey to become a web developer. I'll share a little more below, but first it might be fun to talk about my other interests.
-            </p>
-            <p>
-                I discovered a creative streak in my teenage years that has remained a very meaningful part of life for me all the way into my 30s (just realised while writting this - time goes by...). I like focusing on creative projects, alone or with friends, and this lead to taking part in a few bands, self-publishing some short stories and poetry chap-books, a handful of acylics paintings and even a screenplay (still in the works with friends). Creating something is the best form of therapy for me and everytime I venture into a new project or a different medium I only feel more passionate about it. All of my art helps me explore a variety of philosophical ideologies, theological questions and personal life lessons. I'm vegan, straight edge and gender nonconforming, and all of this features greatly in my creations.
-            </p>
-            <p>
-                Apart from any creative pursuits, I like to focus on quality time with my partner, my dog and my friends.
-            </p>
-        </section>
-        <section id="work_history">
-            <h4>My career so far</h4>
-            <p>
-                When I arrived in London, 7 years ago, I had little experience but found the city filled with opportunity and was able to start a management career across different businesses. I worked in various locatons for two of the major cinema chains and a well-known coffee company, but realised it was time to find something I could relate with a little more. 
-            </p>
-            <p>
-                Going to work was often a dull business and I always made it a point to avoid working as writer (which is probably my first and foremost passion) because I see creativity as a personal safe space. But the disconnect of my personality and convictions to my day-to-day occupation was taking a toll, so I made the decision to join a vegan business and change career path. That was how I ended up doing HR for a start-up (which is my current role).
-            </p>
-            <p>
-                Working in a start-up environment, where everyone is rallied behind a common goal they are passionate about, and learning the intricacies of a new role has been a super enriching experience. I've dealt with a lot of different situations and feel like a much more well-rounded person (not just a well-rounded worker) for having had this experience. But now that I've taken that leap, and done it for about 4 years, I took another step back to think about what I would like to do next.
-            </p>
-            <p>
-                Helping people in this role of support can be very gratifying but it can also be draining for someone who is a bit more introverted, like me. I have created lovely relationships at work over this time and am always excited to think of all the people I have seen grow in the company (and beyond), often on the back of support initiatives or systems that were put in place by the rest of the HR team and I. But now that I think the time is coming to try something new, I've realised I'd love to take on an entire new challenge, instead of just a new role. That reflection brought me here!
-            </p>
-        </section>
-        <section id="learning_curve">
-            <h4>Why I'm applying to Founders and Coders</h4>
-            <p class="learning">
-                I recognised in my habitual ways of working an iterative approach to problem solving and a taste for the kind of task others often find tedious (like handling data, or setting up new company-wide systems) and I wondered what different career path might be out there that I would enjoy. Luckily, I was exposed to the work of the Web Developers at my last job, and a spark came to life.
-            </p>
-            <p class="learning">
-                I started studying on my own by mid September 2022 and quickly got hooked. This is the kind of stimulating challenge I enjoy meeting with and it was easy for me to understand that web development was the next step in my career.
-            </p>
-            <p class="learning">
-                I started looking at Bootcamps that might help me make the leap and came across Founders and Coders. It seemed perfect for me and, because there is no time like now, I got started on the application challenges. They definitely pushed my learning to a new level.
-            </p>
-            <p class="learning">
-                Here on the right is a piece of code I particularly enjoyed developing during my application.
-            </p>
-            
-            <p class="learning">
-                 Of course, all the learning so far lead to this very page. You can peek behind the fourth wall right <a class="direct-link timed" href="https://github.com/camelPhonso/website.git">here!</a>
-            </p>
-        </section>
-            <a id="to_gallery" href="https://camelphonso.github.io/projects_gallery/">
-                <code id="code_example">
-                    function render(obj){<br>
-                    document.getElementById('movie_list').innerHTML = ''; //clear last<br>
-                    document.getElementById('selector').innerHTML = '';<br>
-                    <p class="indent">
-                        for (let i of Object.keys(obj)){ //iterate through Object<br>
-                            <p class="indent-more">
-                            let par = document.createElement('p'); <br> 
-                            par.classList.add('film_display');<br>
-                            par.classList.add('hidden');<br>
-                            par.setAttribute('onmouseover', 'details(this.textContent)', 'hide()');<br>
-                            let cont = document.createTextNode(i);<br>
-                            display.appendChild(par);<br>
-                            par.appendChild(cont);<br>
-                            </p>
-                        };<br>
+    <body>        
+        <section id="about_me" class="option hidden">
+            <div class="heading">
+                <h4>Personal Intro</h4>
+                <button class="show">Show more...</button>
+            </div>
+            <div class="content">
+                <div class="display">
+                    <div id="frame">
+                        <img id="waves" alt="acrilic painting displayed in virtual frame" src="https://github.com/camelPhonso/website/blob/main/images/IMG_1274.JPG?raw=true">
+                    </div>
+                    <p id="museum-label">
+                        <span class="bold">Alphonso</span> (a. 1312)<br>
+                        <span class="bold">The waves could have swallowed the sky whole</span> 2018<br>
+                        Acrylic on paper
                     </p>
-                  };
-                </code>
-            </a>
-            <p id="example_caption">
-                I knew I'd need to complete the actions in this function several times when interacting with the "movie data" challenge, so I wanted to design it in a way that would allow me to simply call the function at any point. This challenged me to take a more functional approach to this object-based challenge. I also learned a whole lot about DOM that I hadn't even breached before. I actually ended up going back to the "comment box" challenge and changing the code there to use my new learnings.
-            </p>
-        <section id="fun"></section>
+                </div>
+                <div class="text">
+                    <p>
+                        Hi! I'm Alphonso and this is an early stage in my journey to become a web developer. I'll share a little more below, but first it might be fun to talk about my other interests.
+                    </p>
+                    <p>
+                        I discovered a creative streak in my teenage years that has remained a very meaningful part of life for me all the way into my 30s (just realised while writting this - time goes by...). I like focusing on creative projects, alone or with friends, and this lead to taking part in a few bands, self-publishing some short stories and poetry chap-books, a handful of acylics paintings and even a screenplay (still in the works with friends). Creating something is the best form of therapy for me and everytime I venture into a new project or a different medium I only feel more passionate about it. All of my art helps me explore a variety of philosophical ideologies, theological questions and personal life lessons. I'm vegan, straight edge and gender nonconforming, and all of this features greatly in my creations.
+                    </p>
+                    <p>
+                        Apart from any creative pursuits, I like to focus on quality time with my partner, my dog and my friends.
+                    </p>
+                </div>
+                
+        </section>
+
+        <section id="work_history" class="hidden">
+            <div class="heading">
+                <h4>My career so far</h4>
+                <button class="show">Show more...</button>
+            </div>
+            <div class="content">
+                <div class="display"></div>
+                <div class="text">
+                    <p>
+                        When I arrived in London, 7 years ago, I had little experience but found the city filled with opportunity and was able to start a management career across different businesses. I worked in various locatons for two of the major cinema chains and a well-known coffee company, but realised it was time to find something I could relate with a little more. 
+                    </p>
+                    <p>
+                        Going to work was often a dull business and I always made it a point to avoid working as writer (which is probably my first and foremost passion) because I see creativity as a personal safe space. But the disconnect of my personality and convictions to my day-to-day occupation was taking a toll, so I made the decision to join a vegan business and change career path. That was how I ended up doing HR for a start-up (which is my current role).
+                    </p>
+                    <p>
+                        Working in a start-up environment, where everyone is rallied behind a common goal they are passionate about, and learning the intricacies of a new role has been a super enriching experience. I've dealt with a lot of different situations and feel like a much more well-rounded person (not just a well-rounded worker) for having had this experience. But now that I've taken that leap, and done it for about 4 years, I took another step back to think about what I would like to do next.
+                    </p>
+                    <p>
+                        Helping people in this role of support can be very gratifying but it can also be draining for someone who is a bit more introverted, like me. I have created lovely relationships at work over this time and am always excited to think of all the people I have seen grow in the company (and beyond), often on the back of support initiatives or systems that were put in place by the rest of the HR team and I. But now that I think the time is coming to try something new, I've realised I'd love to take on an entire new challenge, instead of just a new role. That reflection brought me here!
+                    </p>
+                </div>
+            </div>
+
+            
+            <div>
+               
+            </div>
+        </section>
+        <section id="learning_curve" class="hidden">
+            <div class="heading">
+                <h4>Why I'm applying to Founders and Coders</h4>
+                <button class="show">Show more...</button>
+            </div>
+            <div class="content">
+                <div class="text">
+                    <p >
+                        I recognised in my habitual ways of working an iterative approach to problem solving and a taste for the kind of task others often find tedious (like handling data, or setting up new company-wide systems) and I wondered what different career path might be out there that I would enjoy. Luckily, I was exposed to the work of the Web Developers at my last job, and a spark came to life.
+                    <div>
+                    </p>
+                    <p>
+                        I started studying on my own by mid September 2022 and quickly got hooked. This is the kind of stimulating challenge I enjoy meeting with and it was easy for me to understand that web development was the next step in my career.
+                    </p>
+                    <p>
+                        I started looking at Bootcamps that might help me make the leap and came across Founders and Coders. It seemed perfect for me and, because there is no time like now, I got started on the application challenges. They definitely pushed my learning to a new level.
+                    </p>
+                    <p>
+                        Here, you can see a piece of code I particularly enjoyed developing during my application.
+                    </p>
+                    
+                    <p>
+                         Of course, all the learning so far lead to this very page. You can peek behind the fourth wall right <a class="direct-link" href="https://github.com/camelPhonso/website.git" target="_blank">here!</a>
+                    </p>
+                    </div>
+                </div>
+                <div class="display">
+                    <code id="code_example">
+                        function render(obj){<br>
+                        document.getElementById('movie_list').innerHTML = ''; //clear last<br>
+                        document.getElementById('selector').innerHTML = '';<br>
+                        <p class="indent">
+                            for (let i of Object.keys(obj)){ //iterate through Object<br>
+                                <p class="indent-more">
+                                let par = document.createElement('p'); <br> 
+                                par.classList.add('film_display');<br>
+                                par.classList.add('hidden');<br>
+                                par.setAttribute('onmouseover', 'details(this.textContent)', 'hide()');<br>
+                                let cont = document.createTextNode(i);<br>
+                                display.appendChild(par);<br>
+                                par.appendChild(cont);<br>
+                                </p>
+                            };<br>
+                        </p>
+                      };
+                    </code>
+                        <p>
+                        I knew I'd need to complete the actions in this function several times when interacting with the "movie data" challenge, so I wanted to design it in a way that would allow me to simply call the function at any point. This challenged me to take a more functional approach to this object-based challenge. I also learned a whole lot about DOM that I hadn't even breached before. I actually ended up going back to the "comment box" challenge and changing the code there to use my new learnings.
+                        </p>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
