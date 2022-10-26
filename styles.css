@@ -28,6 +28,10 @@ p{
     text-align:justify;
 }
 
+a{
+    color:black;
+}
+
 /*styling the #frame and artwork*/
 #frame{
     height:75vh;
@@ -60,7 +64,7 @@ p{
     font-weight:bold;
 }
 /*styling template sections template*/
-section{
+.info{
     display: flex;
     flex-flow: column nowrap;
     justify-content:flex-start;
@@ -131,4 +135,11 @@ button{
         flex-flow:column nowrap;
 
     }
+}
+
+/*styling the cards for tarot reading feature*/
+.card{
+    height:200px;
+    width: 100px;
+    border-radius:10px;
 }
