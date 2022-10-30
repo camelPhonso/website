@@ -137,9 +137,52 @@ button{
     }
 }
 
-/*styling the cards for tarot reading feature*/
+/*styling the #fun section*/
+#fun{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+    animation: fade-in 5s;
+}
+
+#tarot{
+    position:relative;
+}
+
 .card{
-    height:200px;
-    width: 100px;
-    border-radius:10px;
+    position:absolute;
+    top:5vh;
+    left:5vw;
+}
+
+.card img{
+    border-radius:20px;
+}
+
+.left{
+    transform:rotate(-10deg);
+}
+
+.right{
+    transform:rotate(10deg);
+}
+
+#invitation{
+    font-size:3rem;
+    width:30%;
+}
+
+#invitation a{
+    text-decoration:none;
+    color:var(--highlights)
+}
+
+@keyframes fade-in{
+    from{
+        opacity:0%;
+    };
+
+    to{
+        opacity:100%;
+    }
 }
